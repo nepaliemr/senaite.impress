@@ -1,0 +1,54 @@
+<tal:t define="model python:view.model;
+               client model/Client;
+               contact model/Contact;
+               laboratory python:view.laboratory;"
+       i18n:domain="senaite.impress">
+
+
+  <div class="row section-info no-gutters">
+    <div class="w-100">
+      <!-- Client Info -->
+      <table class="table table-sm table-condensed noborder">
+        <colgroup>
+          <!-- Client Address -->
+          <col style="width: 20%">
+          <!-- Lab Address -->
+          <col style="width: 70%">
+          <!-- Accreditation Logo and QR -->
+          <col style="width: 10%">
+        </colgroup>
+        <tr>
+          <td>
+              <div class="client-name font-weight-bold">
+                          <img class="logo"
+                   tal:attributes="src string:++plone++senaite.core.static/images/nepal.png"/>
+              </div>
+          </td>
+          <td>
+            <!-- Laboratory Info -->
+              <div class="text-center red flex flex-column">
+                <p class="mt-0">Ministry of Health and Population</p>
+                <p class="mt-0">Department of Health Services</p>
+                <h1 >Madhyabindu District Hospital</h1>
+                <p>Kawasoti-16, Sahidnagar (Danda)</p>
+                <p>Nawalparasi (Bardaghat Susta East)</p>
+                <p>Gandaki Nepal</p>
+              </div>
+          </td>
+          <td>
+              <div class="red">   
+                <p>Tel:078-418146</p>
+                <p> &nbsp; &nbsp;&nbsp;&nbsp;0478-418046</p>
+              </div>
+          </td>
+        </tr>
+      </table>
+      <div class="border-buttom"> </div>
+    </div>
+    <!-- Clear Floats
+         https://github.com/Kozea/WeasyPrint/issues/36
+    -->
+    <div class="clearfix"></div>
+  </div>
+
+</tal:t>

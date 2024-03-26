@@ -76,12 +76,17 @@ class ReportView(Base):
     SIGNATURE_TEMPLATE = PT("templates/signatures.pt")
     DISCREETER_TEMPLATE = PT("templates/discreeter.pt")
     FOOTER_TEMPLATE = PT("templates/footer.pt")
+    CUSTOM_CSS_TEMPLATE = PT("templates/custom_css.pt")
+    NEPALI_INFO_TEMPLATE = PT("templates/nepali_info.pt")
 
     def render_js(self, context, **kw):
         return self.JS_TEMPLATE(context, **kw)
 
     def render_css(self, context, **kw):
         return self.CSS_TEMPLATE(context, **kw)
+    
+    def render_custom_css(self, context, **kw):
+        return self.CUSTOM_CSS_TEMPLATE(context, **kw)
 
     def render_controls(self, context, **kw):
         return self.CONTROLS_TEMPLATE(context, **kw)
@@ -91,6 +96,9 @@ class ReportView(Base):
 
     def render_info(self, context, **kw):
         return self.INFO_TEMPLATE(context, **kw)
+    
+    def render_nepali_info(self, context, **kw):
+        return self.NEPALI_INFO_TEMPLATE(context, **kw)
 
     def render_alerts(self, context, **kw):
         return self.ALERTS_TEMPLATE(context, **kw)
