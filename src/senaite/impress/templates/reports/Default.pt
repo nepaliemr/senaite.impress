@@ -7,8 +7,8 @@
   <tal:t replace="structure python:view.render_custom_css(context, **options)" />
 
   <!-- REPORT INFO -->
-  <tal:t replace="structure python:view.render_nepal_info(context, **options)" />
-  
+  <tal:t replace="structure python:view.render_info_nepal(context, **options)" />
+
   <!-- REPORT SIGNATURES -->
   <tal:t replace="structure python:view.render_signatures(context, **options)" />
 
